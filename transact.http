@@ -1,0 +1,38 @@
+POST http://127.0.0.1:8000/register/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "Danny",
+    "email": "noemail@gmail.com",
+    "password": "2222yoyo"
+}
+
+###
+
+POST http://127.0.0.1:8000/login/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "Danny",
+    "password": "2222yoyo"
+}
+
+###
+
+GET http://127.0.0.1:8000/wallet/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "pk": 1
+}
+
+
+###
+POST http://127.0.0.1:8000/transfer/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2NjUzNTAxLCJpYXQiOjE3NTY2NTMyMDEsImp0aSI6ImQxNmQ3M2NjYTI0ZTRkYzc4ZDFhNzk2N2ZjZTFjNjUyIiwidXNlcl9pZCI6IjIifQ.W4yl4kwb7V9n8tkXqQnAkwlvzwR7nZU9lXUoVrDzSlM
+
+{
+    "receiver": 1,
+    "amount": 25.00
+}
